@@ -1,4 +1,4 @@
-<h1>Kanbam Project</h1>
+<h1>Kanban Project</h1>
 
 > Status: Developing
 
