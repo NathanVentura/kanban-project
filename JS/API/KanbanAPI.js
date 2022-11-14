@@ -1,5 +1,5 @@
 export default kanbanAPI {
-Static getItems(columnId){
+  static getItems(columnId){
     const column = read().find(column => column.id == columnId);
 
     if (!column) {
@@ -8,7 +8,20 @@ Static getItems(columnId){
 
     return column.items;
 
-  }0
+  }
+
+    static isertItem(columnId, content) {
+    const data = read();
+    const column = data.find(column => column.id == columnId);
+    const item = {
+      id: Math.floor(Math.random() * 100000),
+      content
+    };
+    if (!column) {
+      throw new Error("Column does not exist");
+    }
+  }
+
 }
 
 function read() {
